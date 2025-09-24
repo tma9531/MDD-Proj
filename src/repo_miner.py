@@ -20,21 +20,34 @@ def fetch_commits(repo_name: str, max_commits: int = None) -> pd.DataFrame:
     Returns a DataFrame with columns: sha, author, email, date, message.
     """
     # 1) Read GitHub token from environment
-    # TODO
+    github_token = os.getenv("GITHUB_TOKEN")
 
     # 2) Initialize GitHub client and get the repo
-    # TODO
+    client = Github(github_token)
+    repo = client.get_repo(repo_name)
 
     # 3) Fetch commit objects (paginated by PyGitHub)
-    # TODO
+    commits = repo.get_commits()
 
     # 4) Normalize each commit into a record dict
-    # TODO
+    num_of_commits = min(commits.totalCount, max_commits)
+
+    commit_records = []
+    for i in range(num_of_commits):
+        # each commit is a dict
+        commit_data = {
+            "sha": commits[i].sha,
+            "author": commits[i].commit.author.name,
+            "email": commits[i].commit.author.email,
+            "date": commits[i].commit.author.date,
+            "message": commits[i].commit.message
+        }
+        commit_records.append(commit_data)
 
     # 5) Build DataFrame from records
-    # TODO
+    return pd.DataFrame(commit_records)
     
-
+# python -m src.repo_miner fetch-commits --repo octocat/Hello-World [--max 100] --out commits.csv
 def main():
     """
     Parse command-line arguments and dispatch to sub-commands.
