@@ -47,7 +47,6 @@ def fetch_commits(repo_name: str, max_commits: int = None) -> pd.DataFrame:
     # 5) Build DataFrame from records
     return pd.DataFrame(commit_records)
     
-# python -m src.repo_miner fetch-commits --repo octocat/Hello-World [--max 100] --out commits.csv
 def main():
     """
     Parse command-line arguments and dispatch to sub-commands.

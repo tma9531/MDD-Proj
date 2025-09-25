@@ -89,8 +89,7 @@ def test_fetch_commits_basic(monkeypatch):
 
 def test_fetch_commits_limit(monkeypatch):
     # More commits than max_commits
-    # TODO： Test that fetch_commits respects the max_commits limit.
-    # Setup dummy commits
+    # Test that fetch_commits respects the max_commits limit.
     now = datetime.now()
     commits = [
         DummyCommit("sha1", "Alice", "a@example.com", now, "Initial commit\nDetails"),
@@ -104,7 +103,7 @@ def test_fetch_commits_limit(monkeypatch):
     assert len(df) == max_commits
 
 def test_fetch_commits_empty(monkeypatch):
-    # TODO: Test that fetch_commits returns empty DataFrame when no commits exist.
+    # Test that fetch_commits returns empty DataFrame when no commits exist.
     commits = []
     gh_instance._repo = DummyRepo(commits, [])
     max_commits = 3
