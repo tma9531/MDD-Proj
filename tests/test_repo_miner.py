@@ -1,10 +1,12 @@
 # tests/test_repo_miner.py
 
 import os
+# from github import Github
+import github
 import pandas as pd
 import pytest
 from datetime import datetime, timedelta
-from src.repo_miner import fetch_commits, fetch_issues, merge_and_summarize
+from src.repo_miner import fetch_commits #, fetch_issues, merge_and_summarize
 
 # --- Helpers for dummy GitHub API objects ---
 
@@ -57,24 +59,25 @@ class DummyRepo:
 
 class DummyGithub:
     def __init__(self, token):
+        self._repo = None
         assert token == "fake-token"
     def get_repo(self, repo_name):
         # ignore repo_name; return repo set in test fixture
-        return self._repo
+        return gh_instance._repo
 
 @pytest.fixture(autouse=True)
-def patch_env_and_github(monkeypatch):
+def patch_env_and_github(monkeypatch: pytest.MonkeyPatch):
     # Set fake token
     monkeypatch.setenv("GITHUB_TOKEN", "fake-token")
     # Patch Github class
-    # TODO
+    monkeypatch.setattr(github, "Github", DummyGithub)
 
 # Helper global placeholder
 gh_instance = DummyGithub("fake-token")
 
 # --- Tests for fetch_commits ---
 # An example test case
-def test_fetch_commits_basic(monkeypatch):
+def test_fetch_commits_basic(monkeypatch: pytest.MonkeyPatch):
     # Setup dummy commits
     now = datetime.now()
     commits = [
@@ -87,7 +90,7 @@ def test_fetch_commits_basic(monkeypatch):
     assert len(df) == 2
     assert df.iloc[0]["message"] == "Initial commit"
 
-def test_fetch_commits_limit(monkeypatch):
+def test_fetch_commits_limit(monkeypatch: pytest.MonkeyPatch):
     # More commits than max_commits
     # Test that fetch_commits respects the max_commits limit.
     now = datetime.now()
@@ -102,7 +105,7 @@ def test_fetch_commits_limit(monkeypatch):
     df = fetch_commits("any/repo", max_commits)
     assert len(df) == max_commits
 
-def test_fetch_commits_empty(monkeypatch):
+def test_fetch_commits_empty(monkeypatch: pytest.MonkeyPatch):
     # Test that fetch_commits returns empty DataFrame when no commits exist.
     commits = []
     gh_instance._repo = DummyRepo(commits, [])
