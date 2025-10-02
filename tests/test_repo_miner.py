@@ -6,7 +6,7 @@ import github
 import pandas as pd
 import pytest
 from datetime import datetime, timedelta
-from src.repo_miner import fetch_commits #, fetch_issues, merge_and_summarize
+from src.repo_miner import fetch_commits, fetch_issues #, merge_and_summarize
 
 # --- Helpers for dummy GitHub API objects ---
 
@@ -112,3 +112,61 @@ def test_fetch_commits_empty(monkeypatch: pytest.MonkeyPatch):
     max_commits = 3
     df = fetch_commits("any/repo", max_commits)
     assert len(df) == 0
+
+def test_fetch_issues_basic(monkeypatch):
+    # Test that fetch issues returns a correct DataFrame with issues.
+    now = datetime.now()
+    issues = [
+        DummyIssue(1, 101, "Issue A", "alice", "open", now, None, 0),
+        DummyIssue(2, 102, "Issue B", "bob", "closed", now - timedelta(days=2), now, 2)
+    ]
+    gh_instance._repo = DummyRepo([], issues)
+    df = fetch_issues("any/repo", state="all")
+    assert {"id", "number", "title", "user", "state", "created_at", "open_duration_days", "closed_at", "comments"}.issubset(df.columns)
+    assert len(df) == 2
+
+def test_fetch_issues_date(monkeypatch):
+    # Test that fetch issues parses dates correctly.
+    now = datetime.now()
+    issues = [
+        DummyIssue(1, 101, "Issue A", "alice", "open", now, None, 0),
+        DummyIssue(2, 102, "Issue B", "bob", "closed", now - timedelta(days=2), now, 2)
+    ]
+    gh_instance._repo = DummyRepo([], issues)
+    df = fetch_issues("any/repo", state="all")
+    # Check date normalization
+    try:
+        columns = list(df)
+        created_date = df[columns[5]][0]
+        closed_date = df[columns[7]][1]
+        datetime.strptime(created_date, "%y-%m-%d")
+        datetime.strptime(closed_date, "%y-%m-%d")
+        assert True
+    except ValueError:
+        assert False
+
+def test_fetch_issues_no_pr(monkeypatch):
+    # Test that fetch issues excludes pull requests.
+    now = datetime.now()
+    issues = [
+        DummyIssue(1, 101, "Issue A", "alice", "open", now, None, 0, is_pr=True),
+        DummyIssue(2, 102, "Issue B", "bob", "closed", now - timedelta(days=2), now, 2)
+    ]
+    gh_instance._repo = DummyRepo([], issues)
+    df = fetch_issues("any/repo", state="all")
+    # Issue A is a pull request, should not be included
+    assert len(df) == 1
+    columns = list(df)
+    assert df[columns[2]][0] == "Issue B"
+
+def test_fetch_issues_duration(monkeypatch):
+    # Test that fetch issues correctly computes open duration days.
+    now = datetime.now()
+    issues = [
+        DummyIssue(2, 102, "Issue B", "bob", "closed", now - timedelta(days=2), now, 2)
+    ]
+    gh_instance._repo = DummyRepo([], issues)
+    df = fetch_issues("any/repo", state="all")
+    columns = list(df)
+    days = df[columns[6]][0]
+    assert days == timedelta(days=2)

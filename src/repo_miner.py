@@ -74,7 +74,7 @@ def fetch_issues(repo_name: str, state: str = "all", max_issues: int = None) -> 
         if max_issues and idx >= max_issues:
             break
         # Skip pull requests
-        if issue.pull_request == None:
+        if issue.pull_request != None:
             continue
 
         # Append records
