@@ -139,8 +139,8 @@ def test_fetch_issues_date(monkeypatch):
         columns = list(df)
         created_date = df[columns[5]][0]
         closed_date = df[columns[7]][1]
-        datetime.strptime(created_date, "%y-%m-%d")
-        datetime.strptime(closed_date, "%y-%m-%d")
+        datetime.strptime(created_date, "%Y-%m-%d")
+        datetime.strptime(closed_date, "%Y-%m-%d")
         assert True
     except ValueError:
         assert False

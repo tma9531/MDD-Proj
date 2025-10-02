@@ -78,9 +78,9 @@ def fetch_issues(repo_name: str, state: str = "all", max_issues: int = None) -> 
             continue
 
         # Append records
-        created_date = issue.created_at.strftime("%y-%m-%d")
+        created_date = issue.created_at.strftime("%Y-%m-%d")
         if issue.closed_at != None:
-            closed_date = issue.closed_at.strftime("%y-%m-%d")
+            closed_date = issue.closed_at.strftime("%Y-%m-%d")
             duration = issue.closed_at - issue.created_at
         else:
             closed_date = None

@@ -1,11 +1,6 @@
 id,number,title,user,state,created_at,open_duration_days,closed_at,comments
-3470138100,55441,"Teams: When adding new users to a team, the they should have automatially access to resources shared with a team","NamedUser(login=""schiessle"")",open,25-09-30,,,1
-3469063720,55428,📦 ❗️Vue 3 Migration - NC33 Roadmap,"NamedUser(login=""sorbaugh"")",open,25-09-30,,,0
-3468865848,55427,Config option to disable Imagic use of SVG for Avatars,"NamedUser(login=""mafjensengithub"")",open,25-09-30,,,1
-3468479880,55423,[Bug]: Public Share Link fails when link creator has access via groupfolder and share,"NamedUser(login=""ZID-TU-Graz-Collab"")",open,25-09-30,,,0
-3467521772,55417,Consider switching from imagemagick to vips,"NamedUser(login=""Justinzobel"")",open,25-09-30,,,3
-3466590245,55416,[Bug]: After upgrade to NC 32 apps not available in app store,"NamedUser(login=""dzidek23"")",open,25-09-29,,,10
-3465853608,55413,[Bug]: Expected filesize of X bytes but read (from Nextcloud client) and wrote (to Nextcloud storage) 8192 bytes,"NamedUser(login=""PaulMcF1987"")",closed,25-09-29,0 days 03:09:57,25-09-29,1
-3464286724,55403,Remove animations when reduce motion is selected at OS level,"NamedUser(login=""marcoambrosini"")",open,25-09-29,,,0
-3464032639,55401,"[Bug]: Searches take too long, overwriting later, more specific searches","NamedUser(login=""MasinAD"")",open,25-09-29,,,0
-3462825282,55393,Encrypt Filenames SSE,"NamedUser(login=""Toorero"")",open,25-09-29,,,2
+3476772012,55509,[Bug]: Can't delete folders on external storage (S3),"NamedUser(login=""marcoklobas"")",open,2025-10-02,,,0
+3476761705,55508,Refine text selection colors,"NamedUser(login=""kra-mo"")",open,2025-10-02,,,0
+3476549199,55500,i18n: Strings should not appear at Transifex,"NamedUser(login=""rakekniven"")",open,2025-10-02,,,1
+3476302501,55498,bentnato@gmail.com,"NamedUser(login=""padchapoom"")",closed,2025-10-02,0 days 00:46:12,2025-10-02,0
+3475830243,55496,CILFIBEA8X4TCEWG,"NamedUser(login=""padchapoom"")",closed,2025-10-02,0 days 02:54:30,2025-10-02,0

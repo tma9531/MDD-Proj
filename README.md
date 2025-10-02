@@ -1,1 +1,1 @@
-Repo Miner: fetches commits from Github repositories, tests for repo_miner included
+Repo Miner: fetches commits and issues from Github repositories. Tests for repo_miner are included. 
