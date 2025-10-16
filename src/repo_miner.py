@@ -4,9 +4,13 @@ repo_miner.py
 
 A command-line tool to:
   1) Fetch and normalize commit data from GitHub
+  2) Fetch and normalize issue data from GitHub
+  3) Merge and summarize commits and issues
 
 Sub-commands:
   - fetch-commits
+  - fetch-issues
+  - summarize
 """
 
 from datetime import datetime
