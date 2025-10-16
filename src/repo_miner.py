@@ -28,7 +28,7 @@ def fetch_commits(repo_name: str, max_commits: int = None) -> pd.DataFrame:
     github_token = os.getenv("GITHUB_TOKEN")
 
     # 2) Initialize GitHub client and get the repo
-    client = github.Github(github_token)
+    client = github.Auth.Token(github_token)
     repo = client.get_repo(repo_name)
 
     # 3) Fetch commit objects (paginated by PyGitHub)
@@ -63,11 +63,9 @@ def fetch_issues(repo_name: str, state: str = "all", max_issues: int = None) -> 
     Returns a DataFrame with columns: id, number, title, user, state, created_at, closed_at, comments.
     """
     # 1) Read GitHub token
-    # github_token = os.getenv("GITHUB_TOKEN")
-    github_token = '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'
+    github_token = os.getenv("GITHUB_TOKEN")
 
     # 2) Initialize client and get the repo
-    # client = github.Github(github_token)
     client = github.Auth.Token(github_token)
     repo = client.get_repo(repo_name)
 
