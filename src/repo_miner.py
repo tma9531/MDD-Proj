@@ -4,9 +4,13 @@ repo_miner.py
 
 A command-line tool to:
   1) Fetch and normalize commit data from GitHub
+  2) Fetch and normalize issue data from GitHub
+  3) Merge and summarize commits and issues
 
 Sub-commands:
   - fetch-commits
+  - fetch-issues
+  - summarize
 """
 
 from datetime import datetime
@@ -59,10 +63,12 @@ def fetch_issues(repo_name: str, state: str = "all", max_issues: int = None) -> 
     Returns a DataFrame with columns: id, number, title, user, state, created_at, closed_at, comments.
     """
     # 1) Read GitHub token
-    github_token = os.getenv("GITHUB_TOKEN")
+    # github_token = os.getenv("GITHUB_TOKEN")
+    github_token = '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'
 
     # 2) Initialize client and get the repo
-    client = github.Github(github_token)
+    # client = github.Github(github_token)
+    client = github.Auth.Token(github_token)
     repo = client.get_repo(repo_name)
 
     # 3) Fetch issues, filtered by state ('all', 'open', 'closed')
@@ -115,14 +121,43 @@ def merge_and_summarize(commits_df: pd.DataFrame, issues_df: pd.DataFrame) -> No
 
     # 1) Normalize date/time columns to pandas datetime
     commits['date']      = pd.to_datetime(commits['date'], errors='coerce')
-    # TODO issues['created_at'] = ...
-    # issues['closed_at']  = ...
+    issues['created_at'] = pd.to_datetime(issues['created_at'], errors='coerce')
+    issues['closed_at']  = pd.to_datetime(issues['closed_at'], errors='coerce')
 
     # 2) Top 5 committers
+    committers = dict()
+    for commit in commits.itertuples():
+        author = commit.author
+        if author not in committers:
+            committers.update({author: 1})
+        else:
+            new_count = committers.get(author) + 1
+            committers.update({author: new_count})
+
+    print("Top 5 committers")
+    top_committers = sorted(committers.items(), key=lambda x: x[1], reverse=True)[:5]
+    for row in top_committers:
+        print(row[0] + ": " + str(row[1]) + " commits")
 
     # 3) Calculate issue close rate
+    closed_count = 0
+    for state in issues['state']:
+        if state == 'closed':
+            closed_count += 1
+
+    issue_close_rate = round(closed_count / len(issues), 2)
+    print("\nIssue close rate:", issue_close_rate)
 
     # 4) Compute average open duration (days) for closed issues
+    open_duration = 0
+    for duration_str in issues['open_duration_days']:
+        if isinstance(duration_str, str):
+            # duration = datetime.strptime(duration_str, '%d days %H:%M:%S')
+            duration = pd.to_timedelta(duration_str)
+            open_duration += duration.days
+
+    average_open_duration = round(open_duration / closed_count, 2)
+    print("\nAvg. issue open duration:", average_open_duration, "days")
     
 def main():
     """

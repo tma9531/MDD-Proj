@@ -188,7 +188,8 @@ def test_merge_and_summarize_output(capsys):
         "user": ["u1","u2","u3"],
         "state": ["closed","open","closed"],
         "created_at": ["2025-01-01T00:00:00","2025-01-01T02:00:00","2025-01-02T00:00:00"],
-        "closed_at": ["2025-01-01T12:00:00",None,"2025-01-02T12:00:00"],
+        "open_duration_days": ['2 days 00:00:00', None, '4 days 00:00:00'],
+        "closed_at": ["2025-01-03T12:00:00",None,"2025-01-06T12:00:00"],
         "comments": [0,1,2]
     })
     # Run summarize
@@ -200,4 +201,4 @@ def test_merge_and_summarize_output(capsys):
     # Check close rate
     assert "Issue close rate: 0.67" in captured
     # Check avg open duration
-    assert "Avg. issue open duration:" in captured
+    assert "Avg. issue open duration: 3.0 days" in captured

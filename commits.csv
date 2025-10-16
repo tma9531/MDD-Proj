@@ -1,6 +1,101 @@
 sha,author,email,date,message
-7fd1a60b01f91b314f59955a4e4d4e80d8edf11d,The Octocat,octocat@nowhere.com,2012-03-06 23:06:50+00:00,"Merge pull request #6 from Spaceghost/patch-1
-
-New line at end of file."
-762941318ee16e59dabbacb1b4049eec22f0d303,Johnneylee Jack Rollins,Johnneylee.rollins@gmail.com,2011-09-14 04:42:41+00:00,New line at end of file. --Signed off by Spaceghost
-553c2077f0edc3d5dc5d17262f6aa498e69d6f8e,cameronmcefee,cameron@github.com,2011-01-26 19:06:08+00:00,first commit
+dab50fb60487f7d47d82c6857c7be9582314c481,waffles-dev,11237891+waffles-dev@users.noreply.github.com,2025-10-16 14:41:56+00:00,Merge pull request #229 from alexankitty/main
+26422707a3c8c4b52bde744d530b2f420e6e99cb,Adian Kozlica,105174725+AdianKozlica@users.noreply.github.com,2025-10-16 06:02:52+00:00,feat: auto sync clock (#339)
+181f16b8181d7a853050ffd06a4554812356e2c2,Alexandra,alexankitty@gmail.com,2025-10-15 13:15:04+00:00,add wm-class prefix
+eac9a7f48ce9bf9c60b9e7743aaf53d5a0f6351e,waffles-dev,11237891+waffles-dev@users.noreply.github.com,2025-10-14 16:38:54+00:00,feat: Add config options to add new or replace existing arguments for RDP (#332)
+1b24d6030bdb88d43fcd96cfea09e631f5bcf9f4,levev,levvevv@gmail.com,2025-10-14 14:23:51+00:00,feat: Fix incorrect remapping on ports when opening Config with the container running
+27851a77acdbd3e407033492ea437d82701d5430,TibixDev,tibix@fhs.sh,2025-10-14 05:41:11+00:00,fix: Application Scaling card overflowing Display Scaling's dropdown menu
+eed20ec2cdfff39b54454233378b41bab51d4704,TibixDev,tibix@fhs.sh,2025-10-14 05:39:37+00:00,"style: Make ""Application Scaling"" look better"
+2f7a2ce7faef517bb7a09000ceb466390dd2b190,Biswash Poudel,poudelbiswash27@gmail.com,2025-10-13 08:22:04+00:00,chore: Fix small typo in SetupUI
+0d2375d6b352f655c5927a3ec7f05b39f6e012c2,Devin,93222657+devin-slothower@users.noreply.github.com,2025-10-13 08:19:45+00:00,feat: add app filtering (#283)
+ae60de6c2cba7a2001fef1027d5c2e06614e6904,TibixDev,tibix@fhs.sh,2025-10-11 11:52:42+00:00,"chore: Remove winboat.md, it was a really old file that does not matter anymore"
+b6fdafc4ee1dea2987ae3c8c33ad7580962dfa88,Tibix,tibix@fhs.sh,2025-10-11 06:25:36+00:00,chore: Update README to not list 32GB in `/var` but rather the user selected folder
+c6a3512ff32894ea5c0b2ecaabb7ed9c886f5187,Vertigo,justhenriquecarvalho@gmail.com,2025-10-11 02:53:35+00:00,chore: Function Typos And Consistency (#290)
+10e913ff592ca752f38742f857d127665f129c07,levev,levvevv@gmail.com,2025-10-10 14:05:40+00:00,feat: Handle potentially overlapping port ranges in PortManager
+1d65302a35e3fb05e79e7ff9773c4a32f6d0d7e1,Levev,levvevv@gmail.com,2025-10-10 12:10:10+00:00,feat: Handle used ports during/after the installation (#181)
+e4f6208e161fbbb73df9dd9fc5c19f7f5e99ec4e,Adian Kozlica,105174725+AdianKozlica@users.noreply.github.com,2025-10-10 04:09:35+00:00,feat: implement application scaling (#243)
+d485c045d13943105428f81619650e8f1b79e5a4,Levev,levvevv@gmail.com,2025-10-10 01:57:14+00:00,chore: Update FUNDING.yml
+30600f45fbcb36dd11261dc3a4e9d545dd895ad4,Tibix,tibix@fhs.sh,2025-10-10 00:48:56+00:00,chore: Update FUNDING.yml
+3c8c4d711b1b466433d85f14b973d5de24ffc554,Tibix,tibix@fhs.sh,2025-10-08 23:56:58+00:00,chore: Update README to indicate kernel modules are now optional
+ccf840987beaaadf07ac0a4d6a4fffef4e1cf216,Tibix,tibix@fhs.sh,2025-10-08 12:30:21+00:00,"chore: Add ""Ask DeepWiki"" badge to the README to auto-refresh wiki weekly"
+a01038e0828913b8aaac4bf4d67777a2999a50e1,github-actions[bot],github-actions[bot]@users.noreply.github.com,2025-10-08 08:29:37+00:00,chore: update flake.nix for version 0.8.7
+5ca463ba5594a37b13660523cd142d62ceb5a2d9,hans,127169913+dxrkinfuser44@users.noreply.github.com,2025-10-08 07:53:45+00:00,chore: Fixed typo in SetupUI (#238)
+a641ec8b0de1140c1cd7d0f40a37eea0e63494b4,TibixDev,tibix@fhs.sh,2025-10-08 07:36:32+00:00,feat: Let the user decide during installation whether or not to share their home folder
+40618c0472d158da7befc462426806373a2cfaf3,github-actions[bot],github-actions[bot]@users.noreply.github.com,2025-10-08 03:45:38+00:00,chore: update flake.nix for version 0.8.6
+77e383d868c212b3271260e8ee93b11ad64be297,TibixDev,tibix@fhs.sh,2025-10-08 03:30:37+00:00,chore: Bump version to 0.8.6
+fc8a00602faeac142d24789af1e46746cb610538,TibixDev,tibix@fhs.sh,2025-10-08 03:03:34+00:00,chore: Remove iptable/iptables_nat kernel modules check and bump `dockur/windows` version to 5.07 (addresses & fixes #210)
+a25f88e90ba18f5124e90dff19076f7e132aa7dc,TibixDev,tibix@fhs.sh,2025-10-08 02:57:04+00:00,style: Fix multi-monitor option clipping
+859313810449b356df8146cef9d00b9fe8e6c8a4,Alexandra,45508320+alexankitty@users.noreply.github.com,2025-10-07 22:18:16+00:00,feat: Adds a multi monitor toggle (#230)
+8b719042b4c6a23304d98783a734fd29aeb8b150,Tibix,tibix@fhs.sh,2025-10-05 06:10:55+00:00,"feat: Install Location & adapt Reset button for this possibility & feat: CPU threads & cores are consistent now, updated to strictly physical cores everywhere (#219)"
+45f35822c0bf84dd46e84d4df31cc7076c629f3b,TibixDev,tibix@fhs.sh,2025-10-04 21:26:48+00:00,chore: Add relog instructions to the Docker group pre-requisite entry
+bff66fe2caa42ffa3a69cb552849f57f2a5183f1,Levev,levvevv@gmail.com,2025-10-02 21:32:05+00:00,chore: Add warning about VM plaintext password in winboat.log
+81636f6e3e1e6f7fe01691385bc17090dee8a229,Tibix,tibix@fhs.sh,2025-10-01 01:10:53+00:00,chore: Create FUNDING.yml & add Ko-Fi
+403a46adb41fccd5eefeda2f155b6d6e61f1ac44,levev,levvevv@gmail.com,2025-09-29 22:04:21+00:00,chore: Update actions/setup-node to v5
+9abdc5ace37eb0cab4714623a59beec10bc8e0e7,levev,levvevv@gmail.com,2025-09-29 21:59:46+00:00,chore: Migrate Electron scripts and configuration files to TypeScript
+106962d830470663c6b1e7a42a69b7743dc20436,Levev,levvevv@gmail.com,2025-09-29 21:15:01+00:00,"feat: Remember window properties upon closing WinBoat, feat: Migrate electron files to ESM (#196)"
+62c10fa4fe73d5f98024baa3a875c8b238fc20af,github-actions[bot],github-actions[bot]@users.noreply.github.com,2025-09-29 01:45:38+00:00,chore: update flake.nix for version 0.8.5
+b024e693f56d8617f82b2d15e3d1931d75e598b9,Simon,175155691+Simon-Weij@users.noreply.github.com,2025-09-29 01:36:56+00:00,feat: Nix support 2.0 (#194)
+d543f5d89f0260c00603bec57ded626e60176b11,github-actions[bot],github-actions[bot]@users.noreply.github.com,2025-09-25 14:05:10+00:00,chore: update flake hash for version 0.8.5
+1f2b84b97f699f235a124e904feae059a39dcc91,TibixDev,tibix@fhs.sh,2025-09-25 12:49:03+00:00,chore: Bump version
+113b16720f7d338ea035fd848d82e7fa788dfac1,TibixDev,tibix@fhs.sh,2025-09-25 12:33:50+00:00,chore: Add a help button for when the Guest Server is offline
+6650d881be4bd97189c07ece8049b2ba0c829491,TibixDev,tibix@fhs.sh,2025-09-25 11:57:41+00:00,feat: Add option for auto-starting the container to Configuration
+a4090e14e779739259f75394981bb667fa0577cd,Kroese,kroese@users.noreply.github.com,2025-09-25 00:13:35+00:00,fix: Remove CPU arguments because they're now implemented by default in dockur/windows:5.03 (#150)
+77d339a72f4dc790a9fb330ff3fa1c014b2720e4,TibixDev,tibix@fhs.sh,2025-09-24 11:46:06+00:00,feat: Warn user when they're about to allocate most of their disk
+9a70732839c8b91f6071bb1e84fd935473e334e2,TibixDev,tibix@fhs.sh,2025-09-24 11:19:17+00:00,chore: Better instructions for the user for when the installation fails
+694b8c756b8660462c52d6da44c37fcc3026c050,github-actions[bot],github-actions[bot]@users.noreply.github.com,2025-09-24 10:37:04+00:00,chore: update flake hash for version 0.8.4
+05094ddffbb8b466158cb5e0563c6efdfd1fe0fb,TibixDev,tibix@fhs.sh,2025-09-23 23:14:58+00:00,fix: Create WINBOAT_DIR in config.ts if it does not exist yet
+219f4e6ee443b357fcc37d2a80c2291855eda9c0,levev,levvevv@gmail.com,2025-09-23 18:20:07+00:00,chore: Fix usage tracking for preset apps with custom behavior
+b65b9c135e0b065c1a27608275184184dc7f805a,Levev,levvevv@gmail.com,2025-09-23 18:09:20+00:00,"feat: Add noVNC as Preset App, feat: Add a way to specify custom behaviour for preset app (#172)"
+1dc8c00f3920848a17ea32ed27bc7cf327b8132f,Luigi Cipriano,31219748+LuigiARC@users.noreply.github.com,2025-09-23 15:34:59+00:00,fix: docker group detection (for Nix) (#169)
+f4e48e5c902201ed4e1d960e24c0cdda732385ad,github-actions[bot],github-actions[bot]@users.noreply.github.com,2025-09-22 12:20:24+00:00,chore: update flake hash for version 0.8.3
+a63b6ad169386f587f849e187ecb02af9f7a4d29,TibixDev,tibix@fhs.sh,2025-09-22 11:52:08+00:00,chore: Bump version (for Nix)
+b4862793912a2a0cfa517c4f3782bc8e2e9c7037,0kenx,km@nxfi.app,2025-09-22 11:08:07+00:00,feat: Add Nix support
+2e39c391d7cc028e5b30c092ca211cd04a3eb1e5,TibixDev,tibix@fhs.sh,2025-09-22 10:39:39+00:00,chore: Bump version
+e57a03989a5de110ee46094db7703dc4cb34dffa,TibixDev,tibix@fhs.sh,2025-09-22 10:22:39+00:00,chore: Change CI runner to ubuntu-22.04 to compile with older glibc
+346dcaf216490478b94e0c4b57efd0cfa3ef5add,delphicmelody,216445466+delphicmelody@users.noreply.github.com,2025-09-21 16:09:32+00:00,chore: Replace WinBoat logo in README with vector version (#161)
+a21cac26ade80d524fa0ee7f155dd6a7e758ad45,TibixDev,tibix@fhs.sh,2025-09-19 21:21:00+00:00,chore: Cast VueApexCharts to any and link issue
+1d7f71b5323b35000f3455302bd57c0f76372336,TibixDev,tibix@fhs.sh,2025-09-19 16:57:48+00:00,fix: CJS imports for Node modules in log.ts
+786257f499de08f2e00ab0c6b5f42aeeaa693a88,TibixDev,tibix@fhs.sh,2025-09-19 16:56:30+00:00,feat: Swap logger from winston to consola by Nuxt
+52318725cac1b29c28790bec65e703f49a93eb0e,TibixDev,tibix@fhs.sh,2025-09-19 15:55:48+00:00,feat: Add CORS to Guest Server (will be useful later down the line when/if we swap node-fetch)
+8e4088d4f615ee2aee28748df9a8fafc3299a1ba,TheDokT0r,85199046+TheDokT0r@users.noreply.github.com,2025-09-19 12:54:32+00:00,chore: Migrate vite.config to ts for intelisense on config (#152)
+c1418881289197cf86908c17005da95aca1ba2be,Tibix,fuloptibi03@gmail.com,2025-09-19 11:12:39+00:00,chore: Update README to include Star Chart
+070dbcb467e703d1af6c018dc857a8a9cc721e9b,Tibix,fuloptibi03@gmail.com,2025-09-19 10:51:54+00:00,chore: Update README with better social badges
+986eb1ef1755cc8051e712fc78738231afe56985,fukumen,fukumen@gmail.com,2025-09-19 10:41:16+00:00,Fixed an issue where the app list could not be obtained on Japanese Windows 11 Pro. (#148)
+f8168476faa5e3b901967909ad595e7d318279c2,TibixDev,tibix@fhs.sh,2025-09-18 11:21:12+00:00,chore: Add a fallback for missing usb.ids and a workflow step to always keep it updated
+daeac224f98fc94af0e51331059023c1f1bb6607,TibixDev,tibix@fhs.sh,2025-09-17 23:00:57+00:00,fix: Add USB dependencies to CI script
+13bc9fe12074c40e4601e179a2e7e9f5b713004c,TibixDev,tibix@fhs.sh,2025-09-17 22:45:36+00:00,chore: Bump version
+3ff275ada5ce9784c84e127a95addbd5fae4c5ec,TibixDev,tibix@fhs.sh,2025-09-17 22:30:07+00:00,fix: Fixed incorrect zip path on packaged builds in some cases for the GS updater
+d805be81d1eb12c5633216fb8f8604a302345b96,TibixDev,tibix@fhs.sh,2025-09-17 21:25:31+00:00,fix: Hacky fix for QMP manager initialization
+c9e379750b831da9d2a7eceb834a7f70e9eff6af,TibixDev,tibix@fhs.sh,2025-09-17 20:32:09+00:00,chore: Implement additional improvements to the USB passthrough feature and UI
+98081d6d28fc508355607690827f4b89565f5326,Levev,levvevv@gmail.com,2025-09-16 22:02:47+00:00,Add Dynamic USB Passthrough (#60)
+b14dee88402a6c0450249e9bb48307f1af307dae,TibixDev,tibix@fhs.sh,2025-09-16 15:30:33+00:00,fix: Small typo in Windows 10 LTSC 2021
+8d5648d0641eebc0787b106a8fb23809f302c7a2,Levev,levvevv@gmail.com,2025-09-16 15:26:28+00:00,feat: Start work on custom FreeRDP port (#133)
+759073ce8c4dc00bca8554479cc4c4149a3d8c6b,TibixDev,tibix@fhs.sh,2025-09-16 15:23:47+00:00,feat: Improve Guest Server updater
+56ad213ba6a14ee40228008b6b0dbbf8b70172fb,TibixDev,tibix@fhs.sh,2025-09-16 12:54:12+00:00,fix: Highlight 'Home' nav item by default
+82b653307b795ea0944f1846f7023a4fab61dbf7,TibixDev,tibix@fhs.sh,2025-09-16 09:25:33+00:00,feat: Experimental features option
+30f2612e43413c7f0d0d527c8a2904f451365bc1,TibixDev,tibix@fhs.sh,2025-09-15 10:41:00+00:00,feat: Username & Password validation
+a75ca0dc16510d1a26caec4a17207c0e6ff60106,Levev,levvevv@gmail.com,2025-09-14 22:48:39+00:00,feat: Add `Logs` field to `Bug Report` form (#129)
+cc17ddaff5089516e9792dbd2d067997f0c46933,Tibix,fuloptibi03@gmail.com,2025-09-13 18:44:34+00:00,chore: Update README to include even clearer that WinBoat is not compatible with Docker Desktop
+4cfc218cf2ca1816a3ec21e8d560fb02c81da6d0,Simon,175155691+Simon-Weij@users.noreply.github.com,2025-09-13 14:57:30+00:00,Password confirmation (#117)
+d0cf4ff0551c17c2763e5adfaf02e393e3231112,TibixDev,tibix@fhs.sh,2025-09-13 13:26:26+00:00,fix(?): Get usergroups with `id -Gn` instead of `groups`
+7548e429c4015114ec9e06f8240a8a489dd42c76,TibixDev,tibix@fhs.sh,2025-09-12 09:40:56+00:00,Merge branch 'main' of https://github.com/TibixDev/winboat
+90add33c878372375954c3521c6aee14d15986df,TibixDev,tibix@fhs.sh,2025-09-12 09:40:52+00:00,feat: Also detect apps in personal start menu directories
+45fe2933706e76ec60f6b7890a1bb7f93d75716d,Levev,levvevv@gmail.com,2025-09-11 18:33:02+00:00,Disallow multiple WinBoat instances. (#69)
+7a5cc2361257606518c9b435c0fadb3df34353c2,Levev,levvevv@gmail.com,2025-09-10 23:11:30+00:00,feat: Add `Bug Report` and `Feature Request` issue forms. (#106)
+be99db0392da905bb42ce0fea53d3905290c24ed,TibixDev,tibix@fhs.sh,2025-09-10 22:05:26+00:00,fix: Detect FreeRDP even if a binary with higher priority but a non-3.x.x version is installed
+66bac2c1f9c13a6eacf4a8592e65880cad7abb21,David,142073269+KiLoBO@users.noreply.github.com,2025-09-10 10:02:54+00:00,Docker Image version pinning + Renovate Config (#90)
+81f34754f6b0620aad4b2b0ba1b263f4c1f67f86,TibixDev,tibix@fhs.sh,2025-09-09 07:56:50+00:00,Merge branch 'main' of https://github.com/TibixDev/winboat
+3e24bf3942d68a0a80dd32e27d5b3fcad5b48cd5,TibixDev,tibix@fhs.sh,2025-09-09 07:56:25+00:00,feat: Check used memory and warn user if they're trying to allocate more than available & refactor specs.ts a bit
+7811edffb48089c392fb69079fa441313bb3b1e8,Tibix,fuloptibi03@gmail.com,2025-09-09 06:18:25+00:00,chore: Update README to include new packaging formats
+28627a077d056946a50882c50949a6149c46453c,TibixDev,tibix@fhs.sh,2025-09-08 03:53:26+00:00,chore: Bump version
+abfd1325bc4f3cd871483d0f79a72b5e93a84220,TibixDev,tibix@fhs.sh,2025-09-08 03:49:46+00:00,feat: Disable and make apps button and search panel semi-transparent if the container is not running or the Guest API is not online
+3f0c485c80f6cd9f6c5492bd2b3dddec05a9c943,TibixDev,tibix@fhs.sh,2025-09-08 03:42:32+00:00,chore: Slightly better comments for Apps DOM
+97c29f18d49a0ac1c68864fe4279ffbc9569ea52,TibixDev,tibix@fhs.sh,2025-09-08 03:37:15+00:00,"fix: Apps should also be updated if the appcache is the smaller than the current apps array, because we might've uninstalled something"
+0f3f0d7f1531e7e89afd422358ce0a509b3d4069,Victor Hugo,5880370+wfzyx@users.noreply.github.com,2025-09-08 03:31:52+00:00,feat: Add refresh button to Apps tab (#61)
+221847bdb5909ca219325c7f037678672887a3e8,TibixDev,tibix@fhs.sh,2025-09-06 09:30:28+00:00,chore: Bump version
+5da80379157c8a1b2a0f2f7bbc2269a95f532313,TibixDev,tibix@fhs.sh,2025-09-06 09:30:08+00:00,style: Undo padding on prerequisites <ul>
+bf53d2cf549988645fdd06dcf49e4d95b0007022,TibixDev,tibix@fhs.sh,2025-09-06 09:18:35+00:00,"feat: Check if Docker is running in pre-requisites, and improve custom ISO layout"
+e9fdc5442a972ce859a8cc54b1ca7f441e533eaa,TibixDev,tibix@fhs.sh,2025-09-06 08:23:05+00:00,"feat: Add FreeRDP version 3.x.x check instead of any version, and some comments/logs where missing"
+24ae3d5232b37244f831c6afae3489d4c59908bf,TibixDev,tibix@fhs.sh,2025-09-05 18:45:15+00:00,chore: Bump package version to 0.7.3
+e6684bcd311f28c9eed73f8abe86e048588d2a4f,TibixDev,tibix@fhs.sh,2025-09-05 18:35:19+00:00,chore: Add email to package.json for CI to run for Debian
+5b1f2024497c027e8b666cc84181ef8decfc666f,Zorin FOSS,132728893+ZorinFoss@users.noreply.github.com,2025-09-05 18:27:17+00:00,"Add Linux DEB/RPM/tar.gz builds, manual workflow runs, and improved artifact naming Description (#41)"
